@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage ("checkout from GIT") {
             steps {
-                git branch: 'main', credentialsId: 'git', url: 'https://github.com/PrachiP29/Terraform_Task'
+                git branch: 'main', credentialsId: 'git', url: 'https://github.com/PrachiP29/test'
             }
         }
         stage ("terraform ls") {
