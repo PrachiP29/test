@@ -1,8 +1,11 @@
-resource "aws_instance" "myweb" {
-  ami           = "ami-0e763a959ec839f5e"
-  instance_type = "t2.micro"
-
-  tags = {
-    Name = "AkuDev"
-  }
+resource "aws_s3_bucket" "ptestbucket" {
+   bucket = "testing-s3-with-terraform-s3"
+   acl = "private"
+   versioning {
+      enabled = true
+   }
+   tags = {
+     Name = "Bucket1"
+     Environment = "Test"
+   }
 }
